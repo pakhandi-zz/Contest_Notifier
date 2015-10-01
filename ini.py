@@ -6,6 +6,8 @@ import pytz
 import time
 import signal
 
+from Tkinter import *
+
 from gi.repository import Gtk as gtk
 from gi.repository import Notify as notify
 from gi.repository import AppIndicator3 as appindicator
@@ -45,6 +47,10 @@ def build_menu():
 	item_update = gtk.MenuItem('Sync')
 	item_update.connect('activate', update)
 	menu.append(item_update)
+
+	item_clock = gtk.MenuItem('Clock')
+	item_clock.connect('activate', elapse)
+	menu.append(item_clock)
 
 	nlist = fill()
 
@@ -125,14 +131,37 @@ def update(_):
 	os.execv(__file__, sys.argv)
 
 def download(url,file_name):
-	os.system('wget -O '+file_name+".ics "+url)
+	os.system('wget -O '+this_path+"/"+file_name+" "+url)
 
 def quit(_):
 	notify.uninit()
 	gtk.main_quit()
 
+root = Tk()
+root.wm_attributes('-topmost', 1)
+ws = root.winfo_screenwidth()
+root.geometry('+'+str(ws-30)+'+10')
+time1 = datetime.now().replace(microsecond=0)
+clock = Label(root, font=('times', 20, 'bold'), bg='black',fg='green')
+clock.pack(fill=BOTH, expand=1)
+
+def tick():
+	global time1
+	time2 = datetime.now().replace(microsecond=0)
+	clock.config(text=(time2-time1))
+	clock.after(200, tick)
+
+def elapse(_):
+	global time1
+	time1 = datetime.now().replace(microsecond=0)
+	tick()
+	root.mainloop()
+
 if __name__ == "__main__":
 	global this_path
-	this_path = os.path.dirname(os.path.abspath(__file__))
+	if getattr(sys, 'frozen', False):
+	    this_path = os.path.dirname(os.path.abspath(sys.executable))
+	else:    
+		this_path = os.path.dirname(os.path.abspath(__file__))
 	signal.signal(signal.SIGINT, signal.SIG_DFL)
 	main()
