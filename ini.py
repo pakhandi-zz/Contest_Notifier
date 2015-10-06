@@ -5,6 +5,7 @@ import sys
 import pytz
 import time
 import signal
+import thread
 
 from Tkinter import *
 
@@ -45,7 +46,7 @@ def build_menu():
 	menu.append(item_today)
 
 	item_update = gtk.MenuItem('Sync')
-	item_update.connect('activate', update)
+	item_update.connect('activate', start_update)
 	menu.append(item_update)
 
 	item_clock = gtk.MenuItem('Clock')
@@ -125,13 +126,17 @@ def today(_):
 		
 		notify.Notification.new("<b>Contest : </b>", date_time_summary[0]+"-"+year_month_DateTimeSummary[1]+"-"+year_month_DateTimeSummary[0]+" ("+date_time_summary[1]+") "+date_time_summary[2], None).show()
 
-def update(_):
+
+def start_update(_):
+	thread.start_new_thread(update, ())
+
+def update():
 	download("https://www.google.com/calendar/ical/br1o1n70iqgrrbc875vcehacjg%40group.calendar.google.com/public/basic.ics","CF.ics")
 	download("https://www.google.com/calendar/ical/appirio.com_bhga3musitat85mhdrng9035jg%40group.calendar.google.com/public/basic.ics","TC.ics")
 	os.execv(__file__, sys.argv)
 
 def download(url,file_name):
-	os.system('wget -O '+this_path+"/"+file_name+" "+url)
+	print(os.system('wget -O '+this_path+"/"+file_name+" "+url))
 
 def quit(_):
 	notify.uninit()
@@ -150,6 +155,7 @@ def tick():
 	time2 = datetime.now().replace(microsecond=0)
 	clock.config(text=(time2-time1))
 	clock.after(200, tick)
+
 
 def elapse(_):
 	global time1
