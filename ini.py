@@ -142,22 +142,26 @@ def quit(_):
 	notify.uninit()
 	gtk.main_quit()
 
-root = Tk()
-root.wm_attributes('-topmost', 1)
-ws = root.winfo_screenwidth()
-root.geometry('+'+str(ws-30)+'+10')
-time1 = datetime.now().replace(microsecond=0)
-clock = Label(root, font=('times', 20, 'bold'), bg='black',fg='green')
-clock.pack(fill=BOTH, expand=1)
+global time1
+global clock
 
 def tick():
 	global time1
+	global clock
 	time2 = datetime.now().replace(microsecond=0)
 	clock.config(text=(time2-time1))
 	clock.after(200, tick)
 
 
 def elapse(_):
+	root = Tk()
+	root.wm_attributes('-topmost', 1)
+	ws = root.winfo_screenwidth()
+	root.geometry('+'+str(ws-30)+'+10')
+	time1 = datetime.now().replace(microsecond=0)
+	global clock
+	clock = Label(root, font=('times', 20, 'bold'), bg='black',fg='green')
+	clock.pack(fill=BOTH, expand=1)
 	global time1
 	time1 = datetime.now().replace(microsecond=0)
 	tick()
