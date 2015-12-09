@@ -1,3 +1,67 @@
 # Contest_Notifier [UNDER DEVELOPMENT]
 This is a basic Linux based desktop app to keep one informed with upcoming contests on TopCoder and CodeForces.
-It uses 'wget' command to download .ics files.
+
+<h3>Index</h3>
+<ol>
+<li><a href="#requisites">Requisites</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#techused">Technology Used</a></li>
+<li><a href="#testing">Testing</a></li>
+<li><a href="http://bugecode.com/post.php?pid=121" target="_blank">FAQ</a></li>
+</ol>
+
+<a name="requisites"><h3>Requisites</h3></a>
+<ul>
+<li>Linux (Tested on Ubuntu-14.04)</li>
+<li>See the <a href="#installation">installation</a> section to see how to install dependencies.</li>
+</ul>
+
+<a name="installation"><h3>Installation</h3></a>
+<ul>
+<li>Install the following modules in Python to run the application :
+	<ul>
+	<li>pytz
+		<ul>
+		<li>Download zip file from <a href = "https://pypi.python.org/pypi/pytz/" target="_blank">here</a></li>
+		<li>Unzip the zip file and run <b>python setup.py install</b></li>
+		</ul>
+	</li>
+	<li>Tkinter
+		<ul>
+		<li>sudo apt-get install python python-tk idle python-pmw python-imaging</li>
+		</ul>
+	</li>
+	<li>icalendar
+		<ul>
+		<li>sudo apt-get install python-icalendar</li>
+		</ul>
+</li>
+</ul>
+
+<a name="usage"><h3>Usage</h3></a>
+<ul>
+<li>To add the application to StartUp Applications :
+	<ul>
+	<li>Press the "Windows Key" or Click on "Search Button" on top of Unity Bar. Search for "StartUp Applications".</li>
+	<li>Click on "Add".</li>
+	<li>Enter a name, "ContestNotifier".</li>
+	<li>The command will be of format "python \<path\>"</li>
+	<li>Click "Add"</li>
+	</ul>
+</li>
+<li><b>Today</b> tells the contest on that particular day.</li>
+<li><b>Sync</b> will sync the calendar.</li>
+<li><b>Clock</b> will start a lapse time clock.</li>
+</ul>
+
+<a name="techused"><h3>Technology Used</h3></a>
+<ul>
+<li>The application is made using Python-2.7.9</li>
+<li><b>icalendar</b>, <b>Tkinter</b> and <b>pytz</b> modules are used.
+</ul>
+
+<a name="testing"><h3>Testing</h3></a>
+The program has been tested on Ubuntu14.04, 64-bit
+
+For Hugs and Bugs drop a mail at <b>asimkprasad@gmail.com</b>
