@@ -25,7 +25,7 @@ This is a basic Linux based desktop app to keep one informed with upcoming conte
 	<ul>
 	<li>pytz
 		<ul>
-		<li>Download zip file from <a href = "https://pypi.python.org/pypi/pytz/" target="_blank">here</a></li>
+		<li>Download zip file from <a href = "https://pypi.python.org/pypi/pytz/" target="_blank">here</a>.</li>
 		<li>Unzip the zip file and run <b>python setup.py install</b></li>
 		</ul>
 	</li>
@@ -41,6 +41,8 @@ This is a basic Linux based desktop app to keep one informed with upcoming conte
 	</li>
 	</ul>
 </li>
+<li>After all the modules are installed, run the application using : <b>python ini.py</b>.</li>
+<li>It is better to add the application to StartUp Applications as described in <a href="#usage">Usage</a>.</li>
 </ul>
 
 <a name="usage"><h3>Usage</h3></a>
@@ -57,8 +59,9 @@ This is a basic Linux based desktop app to keep one informed with upcoming conte
 	<img src="https://raw.githubusercontent.com/pakhandi/Contest_Notifier/master/img/PyCal2.png">
 	</li>
 	<li>Enter a name, "ContestNotifier".</li>
-	<li>The command will be of format "python &ltpath&gt"</li>
-	<li>Click "Add"</li>
+	<li>The command will be of format "python &ltpath&gt".</li>
+	<li>Click "Add".</li>
+	<li>The application will launch the next time system is restarted.</li>
 	</ul>
 </li>
 <li><b>Today</b> tells the contest on that particular day.</li>
