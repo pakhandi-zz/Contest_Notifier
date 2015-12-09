@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Contest Notifier by pakhandi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Contest Notifier</h1>
+      <h2 class="project-tagline">A basic Linux based desktop app to notify about upcoming algorithmic contests</h2>
+      <a href="https://github.com/pakhandi/Contest_Notifier" class="btn">View on GitHub</a>
+      <a href="https://github.com/pakhandi/Contest_Notifier/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/pakhandi/Contest_Notifier/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="contest_notifier" class="anchor" href="#contest_notifier" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contest_Notifier</h1>
+
+<p>This is a basic Linux based desktop app to keep one informed with upcoming contests on TopCoder and CodeForces.<br>
+<a href="https://github.com/pakhandi/Contest_Notifier"><b>Star</b></a> the repository if you like it.<br> </p>
+
+<p></p><img src="https://github.com/pakhandi/Contest_Notifier/blob/master/img/PyCal3.png">
+
+<h3>
+<a id="index" class="anchor" href="#index" aria-hidden="true"><span class="octicon octicon-link"></span></a>Index</h3>
+
+<ol>
+<li><a href="#requisites">Requisites</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#techused">Technology Used</a></li>
+<li><a href="#testing">Testing</a></li>
+</ol>
+
+<p><a name="requisites"><h3>
+<a id="requisites" class="anchor" href="#requisites" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requisites</h3></a></p>
+
+<ul>
+<li>Linux (Tested on Ubuntu-14.04)</li>
+<li>See the <a href="#installation">installation</a> section to see how to install dependencies.</li>
+</ul>
+
+<p><a name="installation"><h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h3></a></p>
+
+<ul>
+<li>Install the following modules in Python to run the application :
+    <ul>
+    <li>pytz
+        <ul>
+        <li>Download zip file from <a href="https://pypi.python.org/pypi/pytz/" target="_blank">here</a>
+</li>
+        <li>Unzip the zip file and run <b>python setup.py install</b>
+</li>
+        </ul>
+    </li>
+    <li>Tkinter
+        <ul>
+        <li><b>sudo apt-get install python python-tk idle python-pmw python-imaging</b></li>
+        </ul>
+    </li>
+    <li>icalendar
+        <ul>
+        <li><b>sudo apt-get install python-icalendar</b></li>
+        </ul>
+    </li>
+    </ul>
+</li>
+</ul>
+
+<p><a name="usage"><h3>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h3></a></p>
+
+<ul>
+<li>If you work behind a proxy, GoTo line:148 in <i>ini.py</i> and make suitable changes.</li>
+<li>Configure your timezone at line:29 in <i>ini.py</i>.</li>
+<li>If you have just installed the application, <i>Sync</i> to update the calendar.</li>
+<li>To add the application to StartUp Applications :
+    <ul>
+    <li>Press the "Windows Key" or Click on "Search Button" on top of Unity Bar. Search for "StartUp Applications".
+    <img src="https://github.com/pakhandi/Contest_Notifier/blob/master/img/PyCal1.png">
+    </li>
+    <li>Click on "Add".
+    <img src="https://github.com/pakhandi/Contest_Notifier/blob/master/img/PyCal2.png">
+    </li>
+    <li>Enter a name, "ContestNotifier".</li>
+    <li>The command will be of format "python &amp;ltpath&amp;gt"</li>
+    <li>Click "Add"</li>
+    </ul>
+</li>
+<li>
+<b>Today</b> tells the contest on that particular day.</li>
+<li>
+<b>Sync</b> will sync the calendar.</li>
+<li>
+<b>Clock</b> will start a lapse time clock.</li>
+</ul>
+
+<p><a name="techused"><h3>
+<a id="technology-used" class="anchor" href="#technology-used" aria-hidden="true"><span class="octicon octicon-link"></span></a>Technology Used</h3></a></p>
+
+<ul>
+<li>The application is made using Python-2.7.9</li>
+<li>
+<b>icalendar</b>, <b>Tkinter</b> and <b>pytz</b> modules are used.
+</li>
+</ul>
+
+<p><a name="testing"><h3>
+<a id="testing" class="anchor" href="#testing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Testing</h3></a>
+The program has been tested on Ubuntu14.04, 64-bit</p>
+
+<p>For Hugs and Bugs drop a mail at <b><a href="mailto:asimkprasad@gmail.com">asimkprasad@gmail.com</a></b></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/pakhandi/Contest_Notifier">Contest Notifier</a> is maintained by <a href="https://github.com/pakhandi">pakhandi</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-56207835-4");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
