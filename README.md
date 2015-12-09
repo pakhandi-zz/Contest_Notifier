@@ -1,7 +1,8 @@
 # Contest_Notifier
-This is a basic Linux based desktop app to keep one informed with upcoming contests on TopCoder and CodeForces.
+This is a basic Linux based desktop app to keep one informed with upcoming contests on TopCoder and CodeForces.<br />
+<a href = "https://github.com/pakhandi/Contest_Notifier"><b>Star</b></a> the repository if you like it.<br /> 
 
-<center><img src="https://github.com/pakhandi/Contest_Notifier/blob/master/img/PyCal3.png"></center>
+![Preview](https://raw.githubusercontent.com/pakhandi/Contest_Notifier/master/img/PyCal3.png)
 
 <h3>Index</h3>
 <ol>
@@ -50,10 +51,10 @@ This is a basic Linux based desktop app to keep one informed with upcoming conte
 <li>To add the application to StartUp Applications :
 	<ul>
 	<li>Press the "Windows Key" or Click on "Search Button" on top of Unity Bar. Search for "StartUp Applications".
-	<img src="https://github.com/pakhandi/Contest_Notifier/blob/master/img/PyCal1.png">
+	<img src="https://raw.githubusercontent.com/pakhandi/Contest_Notifier/master/img/PyCal1.png">
 	</li>
 	<li>Click on "Add".
-	<img src="https://github.com/pakhandi/Contest_Notifier/blob/master/img/PyCal2.png">
+	<img src="https://raw.githubusercontent.com/pakhandi/Contest_Notifier/master/img/PyCal2.png">
 	</li>
 	<li>Enter a name, "ContestNotifier".</li>
 	<li>The command will be of format "python &ltpath&gt"</li>
