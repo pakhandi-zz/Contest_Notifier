@@ -6,6 +6,7 @@ import pytz
 import time
 import signal
 import thread
+import urllib2
 
 from Tkinter import *
 
@@ -136,7 +137,18 @@ def update():
 	os.execv(__file__, sys.argv)
 
 def download(url,file_name):
-	print(os.system('wget -O '+this_path+"/"+file_name+" "+url))
+	'''
+	#Uncomment to add support for proxy
+	proxy = urllib2.ProxyHandler({'https': 'username:password@ip:port'})
+	opener = urllib2.build_opener(proxy)
+	urllib2.install_opener(opener)
+	'''
+	response = urllib2.urlopen(url)
+	html = response.read()
+	if len(html) == 0:
+		return
+	f = open(this_path+"/"+file_name, 'w')
+	f.write(html)
 
 def quit(_):
 	notify.uninit()
