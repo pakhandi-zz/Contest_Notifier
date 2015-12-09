@@ -1,7 +1,7 @@
 # Contest_Notifier
 This is a basic Linux based desktop app to keep one informed with upcoming contests on TopCoder and CodeForces.
 
-<img src="https://github.com/pakhandi/Contest_Notifier/blob/master/img/PyCal3.png">
+<center><img src="https://github.com/pakhandi/Contest_Notifier/blob/master/img/PyCal3.png"></center>
 
 <h3>Index</h3>
 <ol>
