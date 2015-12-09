@@ -1,6 +1,8 @@
 # Contest_Notifier [UNDER DEVELOPMENT]
 This is a basic Linux based desktop app to keep one informed with upcoming contests on TopCoder and CodeForces.
 
+<img src="https://github.com/pakhandi/Contest_Notifier/blob/master/PyCal3.png">
+
 <h3>Index</h3>
 <ol>
 <li><a href="#requisites">Requisites</a></li>
@@ -29,24 +31,29 @@ This is a basic Linux based desktop app to keep one informed with upcoming conte
 	</li>
 	<li>Tkinter
 		<ul>
-		<li>sudo apt-get install python python-tk idle python-pmw python-imaging</li>
+		<li><b>sudo apt-get install python python-tk idle python-pmw python-imaging</b></li>
 		</ul>
 	</li>
 	<li>icalendar
 		<ul>
-		<li>sudo apt-get install python-icalendar</li>
+		<li><b>sudo apt-get install python-icalendar</b></li>
 		</ul>
 </li>
 </ul>
 
 <a name="usage"><h3>Usage</h3></a>
 <ul>
+<li>If you work behind a proxy, GoTo line:140 in <i>ini.py</i> and make suitable changes</li>
 <li>To add the application to StartUp Applications :
 	<ul>
-	<li>Press the "Windows Key" or Click on "Search Button" on top of Unity Bar. Search for "StartUp Applications".</li>
-	<li>Click on "Add".</li>
+	<li>Press the "Windows Key" or Click on "Search Button" on top of Unity Bar. Search for "StartUp Applications".
+	<img src="https://github.com/pakhandi/Contest_Notifier/blob/master/PyCal1.png">
+	</li>
+	<li>Click on "Add".
+	<img src="https://github.com/pakhandi/Contest_Notifier/blob/master/PyCal2.png">
+	</li>
 	<li>Enter a name, "ContestNotifier".</li>
-	<li>The command will be of format "python \<path\>"</li>
+	<li>The command will be of format "python &ltpath&gt"</li>
 	<li>Click "Add"</li>
 	</ul>
 </li>
