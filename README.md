@@ -44,8 +44,8 @@ This is a basic Linux based desktop app to keep one informed with upcoming conte
 
 <a name="usage"><h3>Usage</h3></a>
 <ul>
-<li>If you work behind a proxy, GoTo line:140 in <i>ini.py</i> and make suitable changes.</li>
-<li>Configure your timezone at line:21 in <i>ini.py</i>.</li>
+<li>If you work behind a proxy, GoTo line:148 in <i>ini.py</i> and make suitable changes.</li>
+<li>Configure your timezone at line:29 in <i>ini.py</i>.</li>
 <li>If you have just installed the application, <i>Sync</i> to update the calendar.</li>
 <li>To add the application to StartUp Applications :
 	<ul>
