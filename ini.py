@@ -1,5 +1,13 @@
 #!/usr/bin/env python
 
+'''
+	Author : pakhandi
+	Repository : Contest_Notifier
+
+	A basic desktop application for ubuntu to keep track of upcoming
+	contests on CodeForces and TopCoder
+'''
+
 import os
 import sys
 import pytz
@@ -18,7 +26,7 @@ from datetime import datetime
 from icalendar import vDatetime
 from icalendar import Calendar, Event
 
-local_tz = pytz.timezone('Asia/Calcutta')
+local_tz = pytz.timezone('Asia/Calcutta')	#Insert your TimeZone from TimeZoneList.txt
 
 global this_path
 
