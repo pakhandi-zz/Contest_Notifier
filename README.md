@@ -1,4 +1,4 @@
-# Contest_Notifier [UNDER DEVELOPMENT]
+# Contest_Notifier
 This is a basic Linux based desktop app to keep one informed with upcoming contests on TopCoder and CodeForces.
 
 <img src="https://github.com/pakhandi/Contest_Notifier/blob/master/img/PyCal3.png">
@@ -10,7 +10,6 @@ This is a basic Linux based desktop app to keep one informed with upcoming conte
 <li><a href="#usage">Usage</a></li>
 <li><a href="#techused">Technology Used</a></li>
 <li><a href="#testing">Testing</a></li>
-<li><a href="http://bugecode.com/post.php?pid=121" target="_blank">FAQ</a></li>
 </ol>
 
 <a name="requisites"><h3>Requisites</h3></a>
@@ -38,12 +37,16 @@ This is a basic Linux based desktop app to keep one informed with upcoming conte
 		<ul>
 		<li><b>sudo apt-get install python-icalendar</b></li>
 		</ul>
+	</li>
+	</ul>
 </li>
 </ul>
 
 <a name="usage"><h3>Usage</h3></a>
 <ul>
-<li>If you work behind a proxy, GoTo line:140 in <i>ini.py</i> and make suitable changes</li>
+<li>If you work behind a proxy, GoTo line:140 in <i>ini.py</i> and make suitable changes.</li>
+<li>Configure your timezone at line:21 in <i>ini.py</i>.</li>
+<li>If you have just installed the application, <i>Sync</i> to update the calendar.</li>
 <li>To add the application to StartUp Applications :
 	<ul>
 	<li>Press the "Windows Key" or Click on "Search Button" on top of Unity Bar. Search for "StartUp Applications".
