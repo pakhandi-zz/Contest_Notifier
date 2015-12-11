@@ -1,8 +1,14 @@
-# Contest_Notifier
+# Contest_Notifier : V.1.1
 This is a basic Linux based desktop app to keep one informed with upcoming contests on TopCoder and CodeForces.<br />
 <a href = "https://github.com/pakhandi/Contest_Notifier"><b>Star</b></a> the repository if you like it.<br /> 
 
 ![Preview](https://raw.githubusercontent.com/pakhandi/Contest_Notifier/master/img/PyCal3.png)
+
+<h3>Key Features</h3>
+<ul>
+<li>Timings of Contests on TopCoder and CodeForces in your TimeZone on your Desktop.</li>
+<li>Proxy Support for Syncing the calendar.</li>
+</ul>
 
 <h3>Index</h3>
 <ol>
@@ -47,7 +53,7 @@ This is a basic Linux based desktop app to keep one informed with upcoming conte
 
 <a name="usage"><h3>Usage</h3></a>
 <ul>
-<li>If you work behind a proxy, GoTo line:2 in <i>config</i> and make suitable changes.</li>
+<li>If you work behind a proxy, GoTo line:2 in <i>config</i> and make suitable changes. The format of proxy will be <b>username:password@ip:port</b></li>
 <li>Configure your timezone at line:1 in <i>config</i>. A list of TimeZones is provided in <i>TimeZoneList.txt</i>.</li>
 <li>If you have just installed the application, <i>Sync</i> to update the calendar.</li>
 <li>To add the application to StartUp Applications :
