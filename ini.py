@@ -26,9 +26,11 @@ from datetime import datetime
 from icalendar import vDatetime
 from icalendar import Calendar, Event
 
-local_tz = pytz.timezone('Asia/Calcutta')	#Insert your TimeZone from TimeZoneList.txt
+global local_tz
 
 global this_path
+
+global proxy_config, timezone_config
 
 def utc_to_local(utc_dt):
     local_dt = utc_dt.replace(tzinfo=pytz.utc).astimezone(local_tz)
@@ -145,12 +147,11 @@ def update():
 	os.execv(__file__, sys.argv)
 
 def download(url,file_name):
-	'''
 	#Uncomment to add support for proxy
-	proxy = urllib2.ProxyHandler({'https': 'username:password@ip:port'})
-	opener = urllib2.build_opener(proxy)
-	urllib2.install_opener(opener)
-	'''
+	if len(proxy_config) != 0:
+		proxy = urllib2.ProxyHandler({'https': proxy_config})
+		opener = urllib2.build_opener(proxy)
+		urllib2.install_opener(opener)
 	response = urllib2.urlopen(url)
 	html = response.read()
 	if len(html) == 0:
@@ -189,9 +190,21 @@ def elapse(_):
 
 if __name__ == "__main__":
 	global this_path
+	global timezone_config, proxy_config
+
 	if getattr(sys, 'frozen', False):
 	    this_path = os.path.dirname(os.path.abspath(sys.executable))
 	else:    
 		this_path = os.path.dirname(os.path.abspath(__file__))
+
+	config_file = open(this_path+"/config", 'r')
+
+	timezone_config = config_file.readline();
+	timezone_config = timezone_config.split('\n',1);
+
+	proxy_config = config_file.readline();
+
+	local_tz = pytz.timezone(timezone_config[0])	#Insert your TimeZone from TimeZoneList.txt
+
 	signal.signal(signal.SIGINT, signal.SIG_DFL)
 	main()
